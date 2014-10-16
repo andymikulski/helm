@@ -1,0 +1,86 @@
+// Compass includes
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@import "mixins";
+@import "animate";
+
+// FFBC67
+// DA727E
+// AC6C82
+// 685C79
+// 455C7B
+
+body {
+	background-color: #111;
+	overflow: hidden;
+}
+
+audio {
+	visibility: hidden;
+}
+
+.game-ui {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 50;
+
+	height: 100%;
+	width: 100%;
+
+	display: none;
+}
+
+body.has-ui .game-ui {
+	display: block;
+}
+
+.game-display {
+	position: relative;
+	z-index: 25;
+}
+
+
+.game-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+	z-index: 50;
+	height: 100%;
+	width: 100%;
+
+	color: #fff;
+	background: rgba(0,0,0,0.8);
+	font-size: 28px;
+
+	display: none;
+
+	// -webkit-transition: 0.2s opacity ease;
+	// -moz-transition: 0.2s opacity ease;
+	// transition: 0.2s opacity ease;
+
+	&.is-visible {
+		display: block;
+	}
+}
+
+.main-menu {
+	text-align: center;
+	padding-top: 15%;
+	line-height: 2em;
+
+	.menu-list {
+		li {
+			cursor: pointer;
+		}
+	}
+}

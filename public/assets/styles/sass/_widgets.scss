@@ -1,0 +1,71 @@
+
+/**
+ * Widgets
+ */
+
+[widget*="splashTitle"]{
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: 0.5s -webkit-transform ease -0.1s;
+	-moz-transition: 0.5s -moz-transform ease -0.1s;
+	transition: 0.5s transform ease -0.1s;
+}
+
+[widget*="stickyThing"],
+.sticky-thing__clone {
+	position: static;
+	z-index: 500 !important;
+}
+.sticky-thing__clone {
+	position: fixed !important;
+	&.is-bottom {
+		position: absolute !important;
+		bottom: 0;
+		top: auto;
+	}
+}
+
+
+
+// carousel on project chunk
+[widget*="projectCarousel"] {
+	height: 560px;
+	width: 100%;
+	position: relative;
+
+	.carousel-pagination__prev,
+	.carousel-pagination__next {
+		@extend %no-text;
+
+		background-image: image-url('sprite.carousel-pagination.png');
+		background-repeat: no-repeat;
+
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+
+		background-position: left center;
+		left: 0;
+		right: auto;
+	}
+	.carousel-pagination__next {
+		background-position: right center;
+		right: 0;
+		left: auto;
+	}
+
+	.carousel-list {
+		width: 100%;
+		.carousel-list__item {
+			max-width: 50%;
+			float: left;
+
+			img {
+				max-height: 100%;
+				max-width: 100%;
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}
